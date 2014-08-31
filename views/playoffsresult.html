@@ -1,0 +1,7 @@
+<div ng-include src="'views/partials/header.html'"></div><div class="playoffs-results"><div ng-repeat="round in playoffsResults"><h1>{{round.stepName}}</h1><div class="game-results"><span ng-repeat="gameResult in round.games"><table><tr><td ng-class="{
+                                      'winner': gameResult.winner == 0,
+                                      'loser': gameResult.winner == 1
+                                      }">{{gameResult.teams[0]['name']}}</td><td ng-class="{
+                                      'winner': gameResult.winner == 1,
+                                      'loser': gameResult.winner == 0
+                                      }">{{gameResult.teams[1]['name']}}</td></tr><tr><td>{{gameResult.score[0]}}</td><td>{{gameResult.score[1]}}</td></tr></table></span></div></div></div>
